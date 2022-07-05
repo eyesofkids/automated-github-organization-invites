@@ -90,7 +90,7 @@ end
 def add_user_to_team_in_org(client, username, team_id)
   begin
     client.add_team_membership(team_id, username)
-    "Sent invite to join '#{ORG_NAME}' and team '#{TEAM_NAME}', Check your EMAIL"
+    "已寄送邀請信，加入組織 '#{ORG_NAME}' 與團隊 '#{TEAM_NAME}'，請檢查你的Email信箱，確認後可以加入。"
   rescue Octokit::ClientError => e
     "Error: #{e.class}. #{e.message}"
   end
